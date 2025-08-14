@@ -18,4 +18,4 @@ class TestConstructor:
         main_page = MainPage(driver)
         main_page.open()
         main_page.go_to_order_feed()
-        assert "feed" in driver.current_url
+        assert main_page.url_contains("feed")
