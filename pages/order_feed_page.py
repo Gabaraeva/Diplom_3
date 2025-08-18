@@ -10,7 +10,7 @@ class OrderFeedPage(BasePage):
 
     @allure.step("Открыть ленту заказов")
     def open(self):
-        self.driver.get(f"{self.base_url}/feed")
+        super().open("/feed")  # Используем метод базового класса
 
     @allure.step("Получить общее количество заказов")
     def get_orders_total(self):
